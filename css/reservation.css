@@ -1,0 +1,37 @@
+form {
+  padding: 1rem;
+  background: #ffff;
+  box-shadow: 3px 4px 18px #e4e4e4;
+}
+
+.form-check {
+  padding-left: 2.25rem;
+}
+
+.notes {
+  display: inline-block;
+  background: #fff;
+  box-shadow: 3px 4px 18px #e4e4e4;
+  position: absolute;
+  right: 0%;
+  padding: 1rem;
+  bottom: 12rem;
+  width: 30%;
+}
+
+.information {
+  padding: 2rem;
+}
+
+.row-space {
+  width: 100%;
+  height: 1rem;
+}
+
+@media (max-width: 767px) {
+  .notes {
+    position: inherit;
+    background: transparent;
+    box-shadow: 0 0 0;
+  }
+}

@@ -1,0 +1,103 @@
+
+@import value.sass
+
+.s-btn
+	padding: 15px
+	border-color: transparent
+	transition: all .5s
+	background: $bgcr
+	*
+		transition: all .5s
+	&:hover
+		box-shadow: 10px 10px 22px #dedede
+		z-index: 2
+		border-color: #e8e8e8
+		.card-img-top
+			opacity: 1
+		.sertitle
+			color: $primary-cr
+		.card-text
+			// color: #fff
+			text-shadow: 1px 2px 1px #b5b5b5
+.card-img-top
+	opacity: .6
+.sertitle
+	margin: 0.5rem 0 
+.card-title
+.card-text
+	color: #fff
+	text-shadow: 1px 2px 1px #ccc
+
+// 內頁
+.content
+	box-shadow: 6px 10px 13px 9px #f7f7f7
+	position: relative
+	padding: 1rem
+	margin: 2rem 0
+.sv-title-img
+	background: url(../images/services/01.jpg) no-repeat
+	width: 26rem
+	height: calc( 26rem *0.6)
+	background-size: cover
+	position: absolute
+	top: -2rem
+	left: -4rem
+.sv-titlebox
+	min-height: calc( 22vw *0.6)
+	text-shadow: 0 0 10px #fff
+.sv-title
+	font-size: 3rem
+	display: inline-block
+	width: 95%
+	margin-top: 4.5rem
+.sv-titles
+	font-size: 2rem
+	span
+		width: 24%
+		height: 0.5rem
+		background: #9c9c9c
+		display: inline-block
+		vertical-align: middle
+		margin-left: 4rem
+.sv-list-row
+	position: relative
+	&:after
+		content: ""
+		width: .3rem
+		min-height: 8rem
+		background: #fbfbfb
+		box-shadow: 1px 1px 5px 1px #e2e0e0
+		position: absolute
+		right: calc(100% / 12 *8)
+	&:nth-child(even):after
+		right: calc(100% / 12 *7)
+.sv-number
+	color: $primary-cr
+	font-size: 8rem
+	position: relative
+	text-align: center
+	&:before
+		content: "#"
+		color: #fff
+		font-size: 6rem
+		text-shadow: 6px 5px 0 $primary-cr, 5px 4px 0 $primary-cr, 4px 3px 0 $primary-cr, 3px 2px 0 $primary-cr, 1px 0px 0 $primary-cr, 0px -1px 0 $primary-cr, -1px 1px 0 $primary-cr
+		position: absolute
+		left: -0rem
+// @media (min-width: 767px) and (max-width: 1114px) 
+// 	.text02
+// 		font-size: calc(2.8rem + (4-2.8) * ((100vw - 767px) / (1114 - 767)))
+@media (min-width: 768px) and (max-width: 992px) 
+	.sv-number
+		font-size: calc( 6rem + (8 - 6) *  ((100vw - 767px) / (992 - 767)))
+		&:before
+			font-size: calc( 5rem + (6 - 5) *  ((100vw - 767px) / (992 - 767)))
+			left: -.5rem
+@media (max-width: 768px)
+	.sv-title-img
+		position: initial
+		width: 100%
+	.sv-list-row
+		&:after
+			right: calc(100% / 12 *7)
+			top: 1rem
+

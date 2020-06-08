@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    對應顯示
+    <button onclick="checkx()">button01</button>
+    <button onclick="checky()">button02</button>
+
+    <div id="2box01" style="display: none;">box01.box01.box01</div>
+    <div id="2box02" style="display: none;">box02.box02.box02</div>
+</body>
+<script>
+    var first = '2box01';
+
+    // 隱藏全部
+    hideAll();
+
+    // 顯示預設區塊
+    show(first);
+
+    // 隱藏全部
+    function hideAll(){
+        // 徒法煉鋼，幾個區塊就寫幾個
+        hide('2box01');
+        hide('2box02');
+        // 可以試著用迴圈寫
+    }
+
+    function hide(id){
+        document.getElementById(id).style.display = 'none';
+    }
+
+    function show(id){
+        document.getElementById(id).style.display = 'block';
+    }
+
+    // 圖法煉鋼寫法，幾個按鈕就寫幾個 function
+    function checkx(){
+        hideAll()
+        show('2box01');
+    }
+
+    function checky(){
+        hideAll()
+        show('2box02');
+    }
+</script>
+</html>
